@@ -14,7 +14,8 @@
     },
     "scripts": {
         "deploy": "echo 'blog-guilherme-soares.dev' > output_prod/CNAME && gh-pages -d output_prod -b main -r git@github.com:GuilhermeSoares009/guilhermesoares009.github.io.git",
-        "dev": "encore dev"
+        "dev": "encore dev",
+        "prod": "encore production"
     },
     "packageManager": "yarn@3.6.4"
 }
