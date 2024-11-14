@@ -1,0 +1,11 @@
+# Sculpin Site Configuration File
+
+# General site settings
+title: Blog Guilherme Soares
+url: https://guilhermesoares009.github.io
+author: Guilherme Soares
+email: guilhermesoares009@hotmail.com
+
+# Insert your disqus shortname
+# disqus:
+#     shortname: your-shortname

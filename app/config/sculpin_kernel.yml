@@ -1,0 +1,15 @@
+sculpin_content_types:
+    posts:
+        permalink: :year-:month-:day-:filename/
+
+# Disable posts (if you're not planning on having any posts and Sculpin's watch mode complains)
+# sculpin_content_types:
+#     posts:
+#         enabled: false
+
+# Additional services
+services:
+    twig.extension.intl:
+        class: Twig\Extra\Intl\IntlExtension
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,25 @@
+{
+    "require": {
+        "sculpin/sculpin": "^3.2",
+        "twig/intl-extra": "^3.7.1",
+        "ext-gd": "*"
+    },
+    "scripts": {
+        "publish": [
+            "./publish.sh"
+        ],
+        "sculpin-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "sculpin generate --watch --server"
+        ],
+        "yarn-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "yarn encore dev --watch"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "sculpin/sculpin-theme-composer-plugin": true
+        }
+    }
+}
