@@ -9,3 +9,5 @@ email: guilhermesoares009@hotmail.com
 # Insert your disqus shortname
 # disqus:
 #     shortname: your-shortname
+# Output directory for generated files
+output_dir: output_prod

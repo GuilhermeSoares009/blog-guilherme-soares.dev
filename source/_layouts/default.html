@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block head_meta %}
+            <meta name="robots" content="index, follow">
+        {% endblock %}
+        <link rel="preload" href="/build/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/build/Baloo2-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/build/Baloo2-Medium.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/build/Baloo2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/build/Baloo2-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/build/FugazOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/build/app.css">
+
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="{{ site.title }} activity feed">
+        {% set page_url = page.url is same as('/.') ? '/' : page.url %}
+        <link rel="canonical"
+              href="{{ site.url }}{{ page_url }}{{ not (page_url ends with '/') ? '/' : '' }}">
+        {% if page.css_file is defined %}
+        <link rel="stylesheet" href="/build/{{ page.css_file }}.css">
+        {% endif %}
+        {% block head_styles %}
+        {% endblock %}
+        {% block head_scripts %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="global-container">
+            <header>
+                <div class="header-title">
+                    <h1 class="main-heading">
+                        <a aria-current="page" href="/">{{ site.title }}</a>
+                    </h1>
+                </div>
+                <nav class="menu">
+                    <a aria-current="page" href="/">Home</a>
+                    <a href="/categorias">Categorias</a>
+                    {#<a class="nav-link" href="/blog">Posts Archive</a>
+                    <a class="nav-link" href="/blog/tags">Tags</a>#}
+                    <a href="/sobre-mim/">Sobre Mim</a>
+                    <a href="https://youtube.com" target="_blank">
+                        YouTube
+                    </a>
+                </nav>
+            </header>
+            <main>
+                {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+            </main>
+            <footer class="global-footer">&copy; {{ "now"|date("Y") }} {{ site.title }}</footer>
+        </div>
+
+        <script src="/build/app.js"></script>
+        {% block scripts %}
+        {% endblock %}
+
+        {% block scripts_after %}
+        {% endblock %}
+    </body>
+</html>
