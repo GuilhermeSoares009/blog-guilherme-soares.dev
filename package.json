@@ -5,7 +5,6 @@
         "@justinribeiro/lite-youtube": "^1.5.0",
         "@symfony/webpack-encore": "^4.4.0",
         "file-loader": "^6.2.0",
-        "gh-pages": "^6.0.0",
         "highlight.js": "^11.9.0",
         "sass": "^1.80.7",
         "sass-loader": "^13.3.2",
@@ -13,9 +12,12 @@
         "webpack-cli": "^5.1.4"
     },
     "scripts": {
-        "deploy": "echo 'blog-guilherme-soares.dev' > output_prod/CNAME && gh-pages -d output_prod -b main -r git@github.com:GuilhermeSoares009/guilhermesoares009.github.io.git",
+        "deploy": "gh-pages -d output_prod -b main -r git@github.com:GuilhermeSoares009/guilhermesoares009.github.io.git",
         "dev": "encore dev",
         "prod": "encore production"
     },
-    "packageManager": "yarn@3.6.4"
+    "packageManager": "yarn@3.6.4",
+    "devDependencies": {
+        "gh-pages": "^6.2.0"
+    }
 }
